@@ -1,0 +1,71 @@
+############################
+# Obsidian (all vaults)
+############################
+
+# Local workspace state (panels, open files, layout)
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+
+# Cache & logs (generated, non-portable)
+**/.obsidian/cache/
+**/.obsidian/logs/
+
+# 插件缓存目录（保留 data.json 以同步插件配置）
+**/.obsidian/**/cache/
+
+############################
+# OS / File System noise
+############################
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+############################
+# Editor / IDE noise
+############################
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+
+############################
+# Temporary / Backup files
+############################
+
+# Common temp files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.old
+
+############################
+# Archives / exports (optional)
+############################
+
+# Uncomment if you export notes as archives
+# *.zip
+# *.7z
+# *.tar
+# *.tar.gz
+
+############################
+# Logs
+############################
+
+*.log
