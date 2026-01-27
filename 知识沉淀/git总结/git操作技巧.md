@@ -92,8 +92,6 @@ git reset --hard HEAD~1
 
 如果是多个commit，可以通过一次cr提交，只需要把不同的bundle拖进来，然后和上面一样操作。然后下面是commit的信息规范（下面是三个commit），主要注意“原因”和“改动”和“影响面”这三个栏目，至于标题就随便写吧:
 
-🔔
-
 【项目：2C国际化】【ones：2229362】插入空白页接入kd控件
 
 【原因：插入空白页适配国际版】
@@ -296,7 +294,7 @@ git branch -d feature/music-player
 
 两种方法：命令行merge和github提交PR（PR流程如下）。
 
-![](https://cloud-pic.wpsgo.com/V04xZzJkenRVZktzZ0RqRXNVOHdkVloyQ2h4bTFDa1BkRXFGS1c2aktZVVNyZEtkVjh3U3ZWREZCb2VPZmZ5dGhEcXcwYzJhUVppcUZMZ2VHWWxzd1FJcnJUZS9MWWZHajN4eXd1UEFaWFM4V1BvOFRCeU1xWFBQUVExZ1lxRTZrd3VPWTdMLzRwYWprdyszb1l6cjExWTRNM2g5RFMrQjRDMVpkbU1XWDVLN2FKUWllRkt0MDhOWmtrSnhoZTlzTjhhdERrdVZnbG9aMVhMVkZOeHFEUjQxV3V4Rk8xWXE2dHJHc29vSCs2bEQrV0xxMEpLaHVuTGQ4cUFab0NhS3ZCYSsyUFkrY1l4L09mNDlRVk1IRnc9PQ==/attach/object/6JD525JEAAQA2?)
+![](assets/git操作技巧/file-20260127144813958.png)
 
 记住新分支合并好后，需要运行这个命令才能更新代码："git pull origin 分支名"
 
