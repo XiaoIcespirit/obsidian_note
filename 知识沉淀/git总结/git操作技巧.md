@@ -88,7 +88,7 @@ git reset --hard HEAD~1
 
 先commit代码改动，可以在fork软件里面提交，这样操作就行：
 
-![](https://cloud-pic.wpsgo.com/V04xZzJkenRVZktzZ0RqRXNVOHdkVloyQ2h4bTFDa1BkRXFGS1c2aktZVVNyZEtkVjh3U3ZWREZCb2VPZmZ5dGhEcXcwYzJhUVppcUZMZ2VHWWxzd1FJcnJUZS9MWWZHajN4eXd1UEFaWFM4V1BvOFRCeU1xWFBQUVExZ1lxRTZrd3VPWTdMLzRwYWprdyszb1l6cjExWTRNM2g5RFMrQjRDMVpkbU1XWDVLN2FKUWllRkt0MDhOWmtrSnhoZTlzTjhhdERrdVZnbG9aMVhMVkZOeHFEUjQxV3V4Rk8xWXE2dHJHc29vSCs2bEQrV0xxMEpLaHVuTGQ4cUFab0NhS3ZCYSsyUFkrY1l4L09mNDlRVk1IRnc9PQ==/attach/object/F4EUTRJDADQFY?)
+![](assets/git操作技巧/file-20260127144707292.png)
 
 如果是多个commit，可以通过一次cr提交，只需要把不同的bundle拖进来，然后和上面一样操作。然后下面是commit的信息规范（下面是三个commit），主要注意“原因”和“改动”和“影响面”这三个栏目，至于标题就随便写吧:
 
