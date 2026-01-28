@@ -9,7 +9,7 @@
 - 做一个**可嵌入的模块**，方便接入自己的网站
 - **专注免费AI**，自动管理各平台的免费额度
 - 额度用完后**自动切换**到下一个可用的API
-- 支持**多种AI类型**：文本生成、图像识别等
+- 支持**多种AI类型**：文本类、图像类、语言类等
 
 ## 功能设计
 
@@ -30,13 +30,33 @@
 
 ## 支持的AI类型
 
-| 类型 | 可选平台（免费额度） |
-|------|---------------------|
-| 文本生成 | Groq、Cohere、Google AI Studio、Cloudflare Workers AI、HuggingFace |
-| 图像识别 | Google AI Studio（Gemini）、HuggingFace |
-| 图像生成 | Cloudflare Workers AI、HuggingFace |
+### 文本类
+| 类型 | 说明 | 可选平台（免费额度） |
+|------|------|---------------------|
+| 文本生成/对话 | LLM大语言模型 | Groq、Cohere、Google AI Studio、Cloudflare Workers AI、HuggingFace |
+| 文本嵌入 | 将文本转为向量，用于语义搜索 | Cohere、Jina AI、HuggingFace |
+| 翻译 | 多语言翻译 | DeepL（免费版）、LibreTranslate（开源）、Google Translate |
 
-> 后续可根据需要扩展更多平台
+### 图像类
+| 类型 | 说明 | 可选平台（免费额度） |
+|------|------|---------------------|
+| 图像识别 | 识别图片内容、OCR等 | Google AI Studio（Gemini）、HuggingFace |
+| 图像生成 | 文生图 | Cloudflare Workers AI、HuggingFace、Stable Diffusion（本地） |
+
+### 语音类
+| 类型 | 说明 | 可选平台（免费额度） |
+|------|------|---------------------|
+| TTS（文本转语音） | 把文字转成语音朗读 | Edge TTS（微软免费）、Google TTS、Coqui TTS（开源） |
+| STT（语音转文本） | 语音识别，把语音转成文字 | Whisper（OpenAI开源）、AssemblyAI、Google Speech |
+| 语音克隆 | 克隆特定人的声音 | ElevenLabs（有免费额度）、Coqui（开源） |
+
+### 其他
+| 类型 | 说明 | 可选平台（免费额度） |
+|------|------|---------------------|
+| 代码生成 | 辅助编程 | 文本生成模型通用、Codeium |
+| 视频生成 | 文生视频（目前免费资源较少） | HuggingFace（部分模型） |
+
+> 后续可根据需要扩展更多平台和类型
 
 ## 技术实现思路
 
