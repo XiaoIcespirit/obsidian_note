@@ -222,6 +222,55 @@ git config user.name "CompanyName"
 git config user.email "you@company.com"
 ```
 
+## 配置身份验证
+
+GitHub不再支持密码认证，必须使用Token或SSH。
+
+### 方式一：Token（HTTPS）
+
+**1. 生成Token**：GitHub → 头像 → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token，权限至少勾选`repo`，生成后立即复制保存。
+
+**2. 配置凭证存储**（避免每次输入）：
+
+```
+#Windows
+git config --global credential.helper manager
+#Mac
+git config --global credential.helper osxkeychain
+```
+
+**3. 首次push时**，Username填GitHub用户名，Password填Token（不是密码）。
+
+### 方式二：SSH（推荐长期使用）
+
+```
+#1.生成密钥（邮箱换成GitHub注册邮箱）
+ssh-keygen -t ed25519 -C "your_email@example.com"
+#一路回车即可
+
+#2.复制公钥
+#Windows(Git Bash)
+clip < ~/.ssh/id_ed25519.pub
+#Mac
+pbcopy < ~/.ssh/id_ed25519.pub
+
+#3.添加到GitHub：Settings → SSH and GPG keys → New SSH key → 粘贴公钥
+
+#4.测试连接
+ssh -T git@github.com
+#出现 "Hi xxx! You've able successfully authenticated..." 即成功
+
+#5.使用SSH地址（注意和HTTPS地址不同）
+git clone git@github.com:用户名/仓库名.git
+#已有仓库改用SSH
+git remote set-url origin git@github.com:用户名/仓库名.git
+```
+
+| 方式 | 优点 | 缺点 |
+|------|------|------|
+| Token | 配置简单 | 有有效期，需定期更新 |
+| SSH | 一次配置永久使用 | 初次配置稍复杂 |
+
 ## 初始化git
 
 这里会有个坑，在github创建仓库时，仓库分支默认是main分支。但是现在的git初始化时，分支名默认是master。所以在把项目推送到远程时，会出现两个分支的情况（origin/main分支为空，但是origin/master分支为你的代码）
