@@ -10,4 +10,4 @@
  git init
  git branch -M main
 ’‘’
-  
+  第二个方法是下载GitSync软件，在这个软件里面连接github，然后选一个文件夹把github项目clone下来，最后用obsidian打开这个项目，也可以达到上传改动文件到github的效果
