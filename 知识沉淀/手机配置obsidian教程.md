@@ -4,5 +4,8 @@
 ‘’‘
 //这个是进入相关目录
  cd /storage/emulated/0/Documents/obsidian_note/知识沉淀  
+ //这个是向系统说明这个目录是安全目录
+ git config --global --add safe.directory /storage/emulated/0/Documents/obsidian_note
+ 
 ’‘’
   
